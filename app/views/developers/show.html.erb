@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @developer.username %>
+</p>
+
+<p>
+  <strong>Skill:</strong>
+  <%= @developer.skill %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @developer.score %>
+</p>
+
+<%= link_to 'Edit', edit_developer_path(@developer) %> |
+<%= link_to 'Back', developers_path %>

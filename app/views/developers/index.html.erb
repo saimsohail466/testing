@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Developers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Skill</th>
+      <th>Score</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @developers.each do |developer| %>
+      <tr>
+        <td><%= developer.username %></td>
+        <td><%= developer.skill %></td>
+        <td><%= developer.score %></td>
+        <td><%= link_to 'Show', developer %></td>
+        <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
+        <td><%= link_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%== pagy_bootstrap_nav(@pagy) %>
+
+<%= link_to 'New Developer', new_developer_path %>

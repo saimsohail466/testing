@@ -1,0 +1,5 @@
+:schedule:
+  developer_scoring_job:
+    cron: '0 * * * * *'
+    class: DeveloperScoringJob
+    queue: default
